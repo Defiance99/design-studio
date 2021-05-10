@@ -1,0 +1,144 @@
+.service-plan {
+    position: relative;
+    min-height: 100vh;
+    background-color: var(--darkness-color);
+    background-attachment: fixed;
+}
+
+.service-plan__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 650px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    max-width: var(--main-block-width);
+    width: 100%;
+    padding: var(--default-padding);
+    z-index: 2;
+}
+
+.service-plan__header {
+
+}
+
+.service-plan__header .title {
+    color: #FFF;
+    font-size: calc(20px + 1vw);
+}
+
+.service-plan__body {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1050px;
+    width: 100%;
+    margin: 0 auto;
+
+    .single-form__submit {
+        max-width: 150px;
+        text-align: center;
+        margin: 40px auto;
+        border-radius: 10px;
+    }
+}
+
+.service-plan__cost {
+    position: relative;
+    font-weight: 100;
+    color: #FFF;
+    margin: 0;
+    font-size: 23px;
+}
+
+.service-plan__value {
+    font-size: calc(30px + 2.5vw);
+    color: var(--goden-color);
+
+}
+
+.service-plan__cost sup {
+    position: relative;
+    top: -10px;
+    font-size: 40px;
+    color: var(--goden-color);
+}
+
+.service-plan__pack {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    width: 100%;
+    cursor: pointer;
+
+    transition: 350ms;
+
+    &:hover {
+        box-shadow: 0 0 5px 5px;
+    }
+}
+
+.service-plan__pack_center {
+    border-left:  solid 1px #262626;
+    border-right: solid 1px #262626;
+}
+
+.service-plan .text {
+    color: #999;
+    line-height: 30px;
+    padding: 0 10px;
+    margin: 30px 0;
+}
+
+.service-plan {
+
+}
+
+
+@media (min-width: 771px) {
+    .service-plan  {
+
+        .swiper-slide {
+            flex-shrink: 1;
+        }
+
+        .swiper-container {
+            overflow: visible;
+        }
+        .service-plan__swiper-button-next, .service-plan__swiper-button-prev {
+            display: none;
+            top: 23%;
+        }
+        .swiper-right-arrow {
+            left: calc(100% - 35px) !important;
+        }
+        .swiper-left-arrow {
+            right: calc(100% - 20px) !important;
+        }
+    }
+
+}
+@media (max-width: 770px) {
+    .preview__text, .preview__title {
+        padding: 0 15px;
+    }
+    .service-plan {
+        display: flex;
+        align-items: center;
+        min-height: 80vh;
+
+        .service-plan__body {
+            max-width: unset;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+        }
+
+        .service-plan__pack  {
+            align-items: center;
+            margin: 15px;
+            box-shadow: 0 0 5px 5px;
+        }
+    }
+}
